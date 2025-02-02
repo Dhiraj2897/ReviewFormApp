@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>All Reviews</title>
+</head>
+<body>
+<h1>All Reviews</h1>
+<ul>
+    <li th:each="review : ${reviews}">
+        <p><strong>Name:</strong> <span th:text="${review.name}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${review.email}"></span></p>
+        <p><strong>Rating:</strong> <span th:text="${review.rating}"></span></p>
+        <p><strong>Comment:</strong> <span th:text="${review.comment}"></span></p>
+        <hr>
+    </li>
+</ul>
+<a href="/reviews">Submit a New Review</a>
+</body>
+</html>
